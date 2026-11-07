@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7f8fa"><title>Quick Links | LafargeHolcim Bangladesh Ltd.</title>
+<link rel="stylesheet" href="style.css"><script src="links.js" defer></script><script src="script.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="#" aria-label="Quick Links home"><span class="brand-symbol">LH</span><span class="brand-copy"><strong data-i18n="brandTitle">Quick Links</strong><small>LafargeHolcim Bangladesh Ltd.</small></span></a>
+<div class="top-actions"><span class="portal-status"><i></i><span data-i18n="portal">Employee portal</span></span>
+<div class="language-switch" role="group" aria-label="Language"><button id="langEN" class="lang-btn active" type="button">EN</button><button id="langBN" class="lang-btn" type="button">BN</button></div>
+<button class="admin-button" id="adminButton" type="button">Admin Button</button><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme"><span id="themeIcon">☾</span><span id="themeText" data-i18n="dark">Dark</span></button>
+</div>
+</header>
+<main class="page-shell">
+<section class="welcome"><div class="welcome-copy"><span class="overline"><span class="overline-line"></span><span data-i18n="overline">YOUR WORKDAY, CONNECTED</span></span>
+<h1><span data-i18n="headline1">Everything you need.</span><br><span class="accent" data-i18n="headline2">One click away.</span></h1>
+<p data-i18n="intro">Find the tools, reports and resources that keep your work moving.</p></div>
+<div class="welcome-art" aria-hidden="true"><div class="art-ring ring-a"></div><div class="art-ring ring-b"></div><div class="art-core"><b>LH</b><small data-i18n="artLabel">WORK<br>CONNECTED</small></div><span class="art-node node-a">↗</span><span class="art-node node-b">⌘</span><span class="art-node node-c">▤</span></div></section>
+<section class="search-panel" aria-label="Find company resources"><div class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input id="searchInput" type="search" placeholder="Search links, teams, or reports…" autocomplete="off" aria-label="Search resources"><kbd>Ctrl K</kbd></div><div class="search-meta"><span><b id="resultCount">0</b> <span data-i18n="resources">resources</span></span><span class="meta-dot"></span><span data-i18n="searchHint">Search by name or category</span></div></section>
+<section class="directory"><div class="section-heading"><div><span class="section-kicker" data-i18n="directory">RESOURCE DIRECTORY</span><h2 data-i18n="quickAccess">Quick access</h2></div><button class="clear-filter" id="clearFilters" type="button"><span data-i18n="reset">Reset filters</span> <span>↺</span></button></div>
+<nav class="category-nav" id="categoryNav" aria-label="Filter resources by category"></nav><div class="results-heading"><span id="activeCategoryLabel">All resources</span><span class="results-rule"></span><span class="results-hint" data-i18n="openHint">Select a resource to open it in a new tab ↗</span></div>
+<div class="link-grid" id="linkContainer"></div><div class="empty-state" id="emptyState" hidden><div class="empty-symbol">⌕</div><h3 data-i18n="noResults">No matching resources</h3><p data-i18n="tryAgain">Try another keyword or clear your filters.</p><button type="button" id="emptyReset" data-i18n="showAll">Show all resources</button></div></section>
+<section class="download-section" aria-labelledby="downloadHeading">
+  <div class="download-heading">
+    <div><span class="download-kicker">FILE CENTER</span><h2 id="downloadHeading">Downloadable Excel Files</h2><p>Download the required templates and reports.</p></div>
+    <span class="download-badge" aria-hidden="true">XLSX</span>
+  </div>
+  <div class="download-grid">
+    <a class="download-button" href="LHBL%20Customer%20Master%20File.xlsx" download><span class="file-icon" aria-hidden="true">X</span><span><strong>LHBL Customer Master File.xlsx</strong><small>Excel workbook · Download</small></span><span class="download-arrow" aria-hidden="true">↓</span></a>
+    <a class="download-button" href="Assessment%20Form-%20New%20(Trade).xlsx" download><span class="file-icon" aria-hidden="true">X</span><span><strong>Assessment Form- New (Trade).xlsx</strong><small>Excel workbook · Download</small></span><span class="download-arrow" aria-hidden="true">↓</span></a>
+    <a class="download-button" href="dealer%20to%20D2R%20convertion.xlsx" download><span class="file-icon" aria-hidden="true">X</span><span><strong>dealer to D2R convertion.xlsx</strong><small>Excel workbook · Download</small></span><span class="download-arrow" aria-hidden="true">↓</span></a>
+    <a class="download-button" href="Report.xlsx" download><span class="file-icon" aria-hidden="true">X</span><span><strong>Report.xlsx</strong><small>Excel workbook · Download</small></span><span class="download-arrow" aria-hidden="true">↓</span></a>
+  </div>
+</section>
+<footer class="page-footer"><span><b class="footer-mark">LH</b> LafargeHolcim Bangladesh Ltd.</span><span data-i18n="footer">Internal resource directory · Built for better workdays</span><span>Built by <a href="https://mdparvezmussaruf.github.io/myPortfolio/" target="_blank" rel="noopener noreferrer">MD. Parvez Mussaruf</a></span></footer>
+</main>
+<div class="admin-modal" id="adminModal" hidden role="dialog" aria-modal="true" aria-labelledby="adminModalTitle">
+ <form class="admin-dialog" id="adminLoginForm">
+  <button class="admin-close" id="adminClose" type="button" aria-label="Close">×</button>
+  <span class="admin-lock" aria-hidden="true">⌑</span><h2 id="adminModalTitle">Admin Access</h2>
+  <p>Enter the administrator password to continue.</p>
+  <label for="adminPassword">Password</label><input id="adminPassword" type="password" autocomplete="current-password" required>
+  <p class="admin-error" id="adminError" role="alert" hidden>Incorrect password. Please try again.</p>
+  <button class="admin-submit" type="submit">Continue <span>→</span></button>
+ </form>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body></html>
